@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "path": "entrada",
+        "httpMethod": "POST"
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook"
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:3000/process",
+        "method": "POST",
+        "jsonParameters": true,
+        "bodyParametersJson": "{\"message\":\"{{$json[\"message\"]}}\",\"phone\":\"{{$json[\"phone\"]}}\"}"
+      },
+      "name": "Processar IA",
+      "type": "n8n-nodes-base.httpRequest"
+    }
+  ]
+}
