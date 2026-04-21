@@ -51,3 +51,9 @@ npm install
 node api/app.js
 
 n8n start
+
+.env.example → .env
+
+OPENAI_API_KEY=
+WHATSAPP_URL=
+WHATSAPP_API_KEY=
